@@ -216,6 +216,22 @@
 								plus.nativeUI.toast(err);
 								return;
 							}
+						console.log('ajax start');
+						mui.ajax(
+							'http://fangdoudou666.imwork.net/token',
+							{
+								data:{grant_type:'password',username:'oHECDw_sr4QFpqvyoXiM2R3DnAnM'},
+								dataType:'json',
+								type:'post',
+								success:function(data){
+									console.log(data.access_token);
+								},
+								error:function(xhr,type,errorThrown){
+									console.log(xhr);
+									console.log(type);
+									console.log(errorThrown);
+								}
+							});
 							toMain();
 						});
 					});
